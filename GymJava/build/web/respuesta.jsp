@@ -5,7 +5,6 @@
 --%>
 
 <%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.ResultSet"%>
 <%@page import="db.DBRutinas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="registro" scope="request" class="usuario.Usuario" />

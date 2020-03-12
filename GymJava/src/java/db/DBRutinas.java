@@ -33,7 +33,7 @@ public class DBRutinas {
                 + " rut_nombre, "
                 + " rut_descripcion, "
                 + " rut_repeticiones, "
-                + " rut_peso,"
+                + " rut_peso "
                 + " FROM rutinas "
                 + " WHERE rut_id = ? ");
         pstm.setInt(1, id);

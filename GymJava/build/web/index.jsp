@@ -3,9 +3,11 @@
     Created on : 26/10/2019, 02:52:07 PM
     Author     : rapterpakfa
 --%>
+<%@page import="java.util.List"%>
 
 <%@page import="java.sql.ResultSet"%>
 <%@page import="db.DBRutinas"%>
+<%@page import="rutina.Rutina"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,8 +35,6 @@
 			<a href="formRegistro.jsp" class="btn btn-info">Registrar</a>
 		</div>
 	</nav>
-
-
 	<!-- Carrucel -->
 	<div class="bd-example">
 	  <div id="carousel-1" class="carousel slide" data-ride="carousel">
@@ -87,30 +87,49 @@
 	  </div>
 	</div>
 	<!-- ./Carrucel -->
-<% DBRutinas dbr = new DBRutinas();
-        ResultSet rutina = dbr.getRutinas();
-        
-    %>
     
-    <table>
+    <%  DBRutinas dbr = new DBRutinas();
+        ResultSet rutina = dbr.getRutinas();  
+       
+    %>
+    <div class="container">
+    <table  class="mt-5 table table-responsive-md">
             <tr>
-                <th>codigo</th><th>nombre</th><th>apellido</th><th>correo</th><th>acciones</th>
+                <thead class="thead-dark">
+                    <th scope="col">Ejercicio</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Repeticiones</th>
+                    <th scope="col">Peso</th>
+                    <th scope="col">Acciones</th>
+                </thead>
             </tr>
                 <% while (rutina.next()){ %>
                     <tr>
-                        <td><%= rutina.getString("rut_id") %></td>
                         <td><%= rutina.getString("rut_nombre") %></td>
-                        <td><%= rutina.getString("rut_descripcion") %></td>
+                        <td><%= rutina.getString("rut_descripcion") %></td>                        
+                        <td><%= rutina.getString("rut_repeticiones") %></td>
+                        <td><%= rutina.getString("rut_peso") %></td>
                         <td class="links">
-                            <a href="CargarContacto?op=edit&item=<%= rutina.getString("rut_id") %>">Editar</a>
-                            <a href="CargarContacto?op=delete&item=<%= rutina.getString("rut_id") %>">Borrar</a>
+                            <a href="CargarRutina?opc=edit&idx=<%= rutina.getString("rut_id") %>">Editar</a>
+                            <a href="CargarRutina?opc=delete&idx=<%= rutina.getString("rut_id") %>">Borrar</a>
                         </td>
                     </tr>
                 <% }%>
                 <tr>
-                    <td colspan="5" class="links"><a href="insertar_contacto.jsp">Agregar</a></td>
+                    <!--<td colspan="5" class="links"><a href="insertar_contacto.jsp">Agregar</a></td>-->
+            </tr>
+            <tr>
+                <thead class="thead-dark">
+                    <th scope="col">Ejercicio</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Repeticiones</th>
+                    <th scope="col">Peso</th>
+                    <th scope="col">Acciones</th>
+                </thead>
             </tr>
         </table>
+        
+        </div>
 	<!-- Contenido -->
 	<div class="container">
 		<!-- Cartas actividades -->

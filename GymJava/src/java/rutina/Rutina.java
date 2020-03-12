@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package rutina;
-
 /**
  *
  * @author ASUS
@@ -67,6 +66,7 @@ public class Rutina {
     public void setPeso(String peso) {
         this.peso = peso;
     }
-    
+
+
     
 }

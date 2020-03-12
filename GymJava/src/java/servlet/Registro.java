@@ -47,10 +47,12 @@ public class Registro extends HttpServlet {
             contact.setPeso(Integer.parseInt(request.getParameter("peso")));
             contact.setAltura(Integer.parseInt(request.getParameter("estatura")));
             contact.setHistorial(request.getParameter("historial"));
-            contact.setTipoRutinal(request.getParameter("Objetivo"));          
+            contact.setTipoRutinal(request.getParameter("Objetivo"));
+           
             
-            
-            response.sendRedirect("respuesta.jsp");
+            request.setAttribute("registro", contact);
+            request.setAttribute("rutina", rutinadia);
+            request.getRequestDispatcher("respuesta.jsp").forward(request, response);
                                         
     }
 
