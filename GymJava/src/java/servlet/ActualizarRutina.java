@@ -44,7 +44,7 @@ public class ActualizarRutina extends HttpServlet {
             r.setPeso(request.getParameter("txtPeso"));
             conDb.actualizarRutina(r);
             
-            response.sendRedirect("Inicio");
+            response.sendRedirect("index.jsp");
             
         } finally {            
             out.close();

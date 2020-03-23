@@ -14,12 +14,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Registro</title>
-		<!-- css Bootstrap-->
+	<!-- css Bootstrap-->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<!-- Fuentes -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Abel|Anton&display=swap" rel="stylesheet">
-    <!-- css estilos-->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Abel|Anton&display=swap" rel="stylesheet">
+        <!-- css estilos-->
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body >

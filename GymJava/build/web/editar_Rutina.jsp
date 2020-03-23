@@ -37,7 +37,7 @@
         <!-- ./Menu superior -->
 
         <!-- Contenido -->
-        <form id="frmActualizarRutina" action="ActualizarRutina" method="POST">
+        <form id="frmActualizarRutina" name="frmActualizarRutina" action="ActualizarRutina" method="POST" enctype="multipart/form-data" target="_blank" >
              <input type="hidden" id="txtId" name="txtId" value="<%= ((Rutina)session.getAttribute("rutina")).getId() %>">
         <table>
             <tr>

@@ -73,8 +73,7 @@ public class DBRutinas {
             pstm.setString(1, r.getNombre());
             pstm.setString(2, r.getDescripcion());
             pstm.setString(3, r.getRepeticiones());
-            pstm.setString(4, r.getRepeticiones());
-            pstm.setString(5, r.getPeso());
+            pstm.setString(4, r.getPeso());
 
             pstm.executeUpdate();
 

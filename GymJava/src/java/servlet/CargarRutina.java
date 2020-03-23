@@ -52,13 +52,12 @@ public class CargarRutina extends HttpServlet {
                 r.setPeso(res.getString("rut_peso"));
             }            
             if(opc.equals("edit")){
-                System.out.println("HOHSADASDAS");
                 request.getSession().setAttribute("rutina", r);
                 response.sendRedirect("editar_Rutina.jsp");
             }
             if(opc.equals("delete")){
                 conDB.borrarRutina(r);
-                response.sendRedirect("Inicio");
+                response.sendRedirect("index.jsp");
             }
         }catch(Exception e){
             
